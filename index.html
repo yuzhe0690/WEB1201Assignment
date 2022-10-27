@@ -8,32 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link css style sheet -->
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- link icon to use custom icon -->
     <!-- <link rel="icon" type="image/x-icon" href="IMG/icon.ico"> -->
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul class="navbar_list">
-            <li class="navbar_logo"> <img src="IMG/icon.png"> </li>
-            <li class="navbar_btn">Home</li>
-            <li class="navbar_btn">Work
-                <ul class="navbar_dropdown">
-                    <li>X</li>
-                    <li>X</li>
-                    <li>X</li>
-                </ul>
-            </li>
-            <li class="navbar_btn">About
-                <ul class="navbar_dropdown">
-                    <li>X</li>
-                    <li>X</li>
-                    <li>X</li>
-                </ul>
-            </li>
-            <li class="navbar_btn">Login</li>
-            <li class="navbar_btn">Sign Up</li>
-        </ul>
+    <nav class="navbar" id="topNavbar">
+        <a class="logo" href="#"><img src="IMG/icon.png" width="50em"></a>
+        <a href="#">Depression</a>
+        <a href="#">What To Do</a>
+        <a href="#">Get Help</a>
+        <a href="#">Test</a>
+        <a class="login" href="#">Login</a>
+        <a class="signup"href="#">Sign Up</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
     
     <main>
@@ -43,6 +34,8 @@
     <footer>
 
     </footer>
+
+    <script src="JS/scripts.js"></script> 
 </body>
 
 </html>
