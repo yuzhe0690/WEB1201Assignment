@@ -22,6 +22,14 @@ h2 {
     color: black;
 }
 
+p, li {
+    font-size: 1.25em;
+}
+
+a {
+    text-decoration: none;
+}
+
 span {
     font-size: 1.75em;
 }
@@ -125,7 +133,6 @@ footer {
 
 .facts li {
     text-align: justify;
-    font-size: 1.25em;
     list-style: none;
     padding: 1% 0%;
 }
@@ -134,8 +141,40 @@ footer {
     color: darkred;
 }
 
+.depression {
+    width: 100%;
+    background-color: lightblue;  
+}
+
+.depression_content {
+    margin: 2% 0%;
+    width: 55%;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 4% 0%;
+}
+
+.depression_content p {
+    width: 90%;
+    text-align: justify;
+    list-style: none;
+    padding: 1% 0%;
+}
+
+.btn {
+    font-size: 0.8em;
+    padding: 2% 0%;
+    font-weight: bold;
+    width: 25%;
+    text-align: center;
+    background-color: white;
+}
+
+.btn span {
+    color: black;
+}
+
 .footer {
-    margin-top: 1%;
     padding: 1% 0%;
     background-color: lightgray!important;
 }
@@ -163,6 +202,15 @@ footer {
     footer {
         font-size: 0.75em;
         text-align: center;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar a.logo {
+        float: left;
+        background-color: white;
     }
     
     .navbar a:not(:first-child) {
@@ -197,6 +245,34 @@ footer {
         font-size: 1.2em;
         list-style: none;
         padding: 1% 0%;
+    }
+
+    .depression {
+        width: 100%;
+        background-color: lightblue;  
+    }
+    
+    .depression_content {
+        margin: 2% 0%;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 4% 0%;
+    }
+    
+    .depression_content p {
+        text-align: justify;
+        list-style: none;
+        padding: 1% 0%;
+    }
+    
+    .btn {
+        font-size: 0.9em;
+        padding: 2% 0%;
+        font-weight: bold;
+        width: 40%;
+        text-align: center;
+        background-color: white;
     }
 }
   
