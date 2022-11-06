@@ -104,9 +104,8 @@ footer {
     color: white;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.navbar .icon {
-    display: none;
+.navbar .icon { 
+    display: none; /* hide hamburger icon in nav bar when not screen width above 820px */
     margin-right: 2%;
 }
 
@@ -194,8 +193,7 @@ footer {
     width: 80%;
     text-align: justify;
     list-style: none;
-    padding: 1% 0%;
-    
+    padding: 1% 0%;  
 }
 
 .footer {
@@ -356,20 +354,15 @@ footer {
     }
     
     .depression_content {
-        margin: 2% 0%;
+        margin: 4% 0%;
+        padding: 4% 0%;
         width: 85%;
         margin-left: auto;
         margin-right: auto;
-        padding: 4% 0%;
+
     }
-    
-    .depression_content p {
-        text-align: justify;
-        list-style: none;
-        padding: 1% 0%;
-    }
-    
-    .btn { 
+
+    .btn {
         padding: 2% 2%;
         font-weight: bold;
         width: 55%;
@@ -379,6 +372,20 @@ footer {
 
     .btn span {
         font-size: 1.1em;
+    }
+
+    .depression_test_content {
+        padding: 2% 0%;;
+        margin: 2% 0%;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .depression_content p, .depression_test_content p {
+        margin: 1% 0%;
+        text-align: justify;
+        padding: 1% 0%;  
     }
 
     .login_interface {
