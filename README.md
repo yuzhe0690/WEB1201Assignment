@@ -1,4 +1,4 @@
-**# WEB1201Assignment**
+**# WEB1201Assignment #**
 
 This is the final project of the web fundamental course, I am tasked to create an educational website regarding a topic. 
 I had chosen to do an educational website about depression since it has been a common mental health issue in recent years and it is severe.
