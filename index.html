@@ -2,79 +2,116 @@
 <html lang="en">
 
 <head>
-    <title> Lorem Ipsum | Home </title>
+    <title> Depressly | Home </title>
     <meta charset="utf-8">
     <!-- set default viewport size for better scalability on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link css style sheet -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <!-- link to custom library for hamburger icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- link icon to use custom icon -->
-    <!-- <link rel="icon" type="image/x-icon" href="IMG/icon.ico"> -->
+    <link rel="icon" type="image/x-icon" href="/IMG/icon.ico">
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar" id="topNavbar">
-        <a class="logo" href="#"><img src="IMG/icon.png" width="50em"></a>
-        <a href="#">Depression</a>
-        <a href="#">Get Help</a>
-        <a href="#">PHQ-9 Test</a>
-        <a href="#">Contact Us</a>
-        <a class="login" href="HTML/login.html"> Login </a>
-        <a class="signup"href="#">Sign Up</a>
+        <a class="logo" href="index.html"><img src="/IMG/logo.png" width="50em"></a>
+        <!-- set the size of the logo image -->
+        <a href="/HTML/depression.html">Depression</a>
+        <a href="/HTML/help.html">Get Help</a>
+        <a href="/HTML/contact.html">Contact Us</a>
+        <a class="donate" href="#">Donate Us</a>
+        <a class="login" href="/HTML/login.html"> Login </a>
+        <a class="signup" href="/HTML/signup.html">Sign Up</a>
         <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+            <!-- hamburger icon -->
             <i class="fa fa-bars"></i>
         </a>
     </nav>
 
+    <!-- Banner Image -->
     <header>
         <div id="banner">
-            <div class="header">
-                <h1> Lorem Ipsum </h1>
-                <span> Enter desc here... </span>
+            <!-- Style the font color to black here as this is the only page that will have black header font -->
+            <div class="header" style="color:black;">
+                <h1> Depressly </h1>
+                <span> Got Depressed? Got problems. </span>
             </div>
         </div>
     </header>
-    
+
+    <!-- Main Content -->
     <main>
+        <!-- Homepage Facts Section -->
         <div class="facts">
             <h2>Globally...</h2>
             <br>
             <ul>
-                <li><strong>3.8%</strong> of the world's population or <strong>280</strong> million people are affected by depression. </li>
+                <!-- use of strong tags to highlight strong facts -->
+                <li><strong>3.8%</strong> of the world's population or <strong>280</strong> million people are affected
+                    by
+                    depression.</li>
                 <li> more than <strong>700,000</strong> people suicide from depression anually.</li>
                 <li> more than <strong>75%</strong> of people didn't receive treatment for depression.</li>
             </ul>
         </div>
-        <div class="depression">
-            <div class="depression_content">
+
+        <!-- Homepage Depression Content Section -->
+        <div class="home_depression">
+            <div class="content_right">
                 <h2>Depression</h2>
                 <br>
                 <p>
-                    Get educated on depression for you or your loved ones. Know more about what you can do for others or yourself when having depression, and treatments for depression. 
+                    Get educated on depression for you or your loved ones. Know more about what you can do for others or
+                    yourself
+                    when having depression, and treatments for depression.
                     <br><br>
                     Click on the button below to learn more.
                 </p>
                 <br>
-                <a class="btn" href="#"><span>Learn More</span></a>
+                <!-- Button -->
+                <a class="btn" href="/HTML/depression.html"><span>Learn More</span></a>
             </div>
         </div>
-        <div class="depression_test">
-            <div class="depression_test_content">
-                <h2>Get Tested</h2>
+
+        <!-- Homepage Get Help Section -->
+        <div class="home_get_help">
+            <div class="content_left">
+                <h2>Get Help</h2>
                 <br>
                 <p>
-                    Figure out how severe your depression is by completing the PHQ-9(Patient Healthcare Questionaire 9) test.
+                    Reach out to helplines to help treat depression.
                     <br><br>
                     Click on the button to start the test.
                 </p>
                 <br>
-                <a class="btn" href="#"><span>Learn More</span></a>
+                <!-- Button -->
+                <a class="btn" href="/HTML/help.html"><span>Learn More</span></a>
             </div>
         </div>
+
+        <!-- Homepage Depression Questionaire Section -->
+        <div class="home_depression_test">
+            <div class="content_right">
+                <h2>Get Tested</h2>
+                <br>
+                <p>
+                    Figure out how severe your depression is by completing the PHQ-9(Patient Healthcare Questionaire 9)
+                    test.
+                    <br><br>
+                    Click on the button to start the test.
+                </p>
+                <br>
+                <!-- Button -->
+                <a class="btn" href="https://www.familyaware.org/Moodtest"><span>Learn More</span></a>
+            </div>
+        </div>
+
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div id="footer_content">
             <i>
@@ -83,7 +120,8 @@
         </div>
     </footer>
 
-    <script src="JS/scripts.js"></script> 
+    <!-- Link JS to page -->
+    <script src="/JS/script.js"></script>
 </body>
 
 </html>
