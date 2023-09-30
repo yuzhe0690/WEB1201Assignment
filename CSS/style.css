@@ -1,426 +1,892 @@
+/* -Format Styling that will be used in whole website- */
+/* Set styling of all elements */
 * {
     box-sizing: border-box;
+    /* make sure al element fits actual size*/
     margin: 0%;
+    /* set padding and margin of website to 0 */
     padding: 0%;
 }
 
+/* Set styling for html and body */
 html body {
     height: 100%;
+    /* set height to whole screen */
 }
 
+/* Set styling of main content */
 main {
-    margin: 1% 0%;
+    margin-top: 1%;
+    /* set vertical margin for some space in between elements */
 }
 
+/* Set styling of headers (h1, h2, h3,...)*/
 h1 {
+    font-family: Consolas, monaco, monospace;
     font-size: 5em;
+    /* Set font and font size */
 }
 
 h2 {
+    font-family: Consolas, monaco, monospace;
     margin: 1% 0%;
+    /* Set vertical margin for some space in between elements */
     font-size: 3em;
-    color: black;
+    /* Set font and font size */
 }
 
 h3 {
+    font-family: Consolas, monaco, monospace;
     font-size: 2.25em;
+    /* set font and font size */
 }
 
-p, li {
+/* Set styling for paragraphs and lists */
+p,
+li {
+    font-size: 1.35em;
+    /* set font and font size */
+    letter-spacing: 1px;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+/* Set styling for anchors */
+a {
+    font-family: Consolas, monaco, monospace;
+    font-weight: 0;
+    text-decoration: none;
+    /* remove underline in hyperlink */
+}
+
+/* Set styling for span */
+span {
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: 1.75em;
+    /* set font and font size */
+}
+
+/* Set stlying for strong elements */
+strong {
+    font-size: 2em;
+    /* set font size */
+}
+
+label {
+    font-family: Consolas, monaco, monospace;
     font-size: 1.25em;
 }
 
-a {
-    text-decoration: none;
-}
-
-span {
-    font-size: 1.75em;
-}
-
-strong {
-    font-size: 2em;
-}
-
+/* Set styling for footer bar */
 footer {
-    font-size: 0.85em;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: 0.75em;
+    /* set font and font size */
     text-align: center;
+    /* align text to center */
 }
 
+/* -Styles for Navigation Bar- */
+/* navigation bar styling  */
 .navbar {
     display: flex;
     flex-direction: row;
+    /* set navbar to flexbox and flex in row direction */
     position: fixed;
     z-index: 3;
+    /* set navbar to fixed and move to top to make sticky navbar  */
     width: 100%;
+    /* set width of navbar to fit whole screen */
     overflow: hidden;
     background-color: white;
     box-shadow: 0 0 10px gray;
+    /* set navbar color and add bix-shadow */
 }
 
+/* navigation bar link styling */
 .navbar a {
-    justify-content: flex-start;
-    font-size: 1.1em;
+    width: 7.5em;
+    justify-content: flex-end;
+    /* justify link to end of navbar */
+    font-size: 1.05em;
     color: black;
     font-weight: bold;
+    /* set font size, color and weight to bold */
     text-align: center;
     text-decoration: none;
+    /* align text to center and remove underline */
+    border-radius: 6px;
 
     padding: 1em 1em;
-    margin-block-start: 0.8em;
-    margin-block-end: 0.8em;
+    /* set padding of av button */
+    margin-block-start: 0.85em;
+    margin-block-end: 0.85em;
+    /* vertically align nav button in nav bar*/
     margin-left: 0.25em;
     margin-right: 0.25em;
+    /* set gaps in between nav buttons */
 }
 
+/* set hover effect on navbar buttons */
 .navbar a:hover {
     background-color: lightgray;
+    /* change background to gray when hover */
 }
 
+/* set styling for logo in navbar*/
 .navbar a.logo {
+    width: 1em;
     margin-block-start: 0em;
+    /* remove margin  */
     margin-block-end: 0em;
     margin-left: 0em;
+    /* align logo to left */
     margin-right: auto;
     background-color: white;
+    /* override navbar button hover effect */
 }
 
+/* set styling for donate button in navbar */
+.navbar a.donate {
+    color: black;
+    background-color: #77DD77;
+    /* set background and font color */
+}
+
+/* set styling for login button in navbar */
 .navbar a.login {
     color: black;
     background-color: rgb(142, 210, 255);
+    /* set background and font color */
 }
 
-.navbar a.login:hover {
-    color: white;
-}
-
+/* Set styling for sign up button in navbar */
 .navbar a.signup {
     margin-right: 1%;
+    /* add spacing to the right */
     color: black;
     background-color: pink;
+    /* change font and background color */
 }
 
+/* set hover effect for login and sign up button in navbar */
+.navbar a.donate:hover,
+.navbar a.login:hover,
 .navbar a.signup:hover {
     color: white;
+    /* change font color when hover */
 }
 
-.navbar .icon { 
-    display: none; /* hide hamburger icon in nav bar when not screen width above 820px */
+/* set styling for hamburger icon */
+.navbar .icon {
+    display: none;
+    /* hide hamburger icon in navbar when width > 820px */
     margin-right: 2%;
+    /* add spacing to the right */
 }
 
+/* -Set Styling for Banner Image- */
+/* set styling for banner image */
 #banner {
     display: table;
+    /* display as table */
     width: 100%;
     height: 95vh;
-    background-image: url("../IMG/home_banner.jpg");
+    /* set width to 100% of screen and height 95vh */
+    background-image: url("../IMG/therapy.jpg");
+    /* link background image used */
+    box-shadow: 0 0 10px gray;
 
+    /* background image styling */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+/* set styling for header */
 .header {
     z-index: 2;
     display: table-cell;
-    color:white; /* set font color as white */
-    vertical-align: middle;
-    padding-left: 1%;
+    /* display as table-cell */
+    color: white;
+    /* set font color as white */
+    padding-left: 2%;
     margin-top: auto;
     margin-bottom: auto;
+    vertical-align: middle;
+    /* vertically allign to middle */
 }
 
+/* -Set styling for Main Content- */
+/* Set styling for facts in index */
 .facts {
     padding: 1% 0%;
+    /* set vertical padding */
     margin: 2% 0%;
+    /* set vertical margin */
     width: 75%;
+    /* set width of facts div to 75% */
     margin-left: auto;
     margin-right: auto;
+    /* horizontally allign to center */
 }
 
+/* set styling for lists in facts */
 .facts li {
     text-align: justify;
     list-style: none;
     padding: 1% 0%;
 }
 
+/* Set stlying for strong elements in facts */
 .facts li strong {
     color: darkred;
+    /* Change color to dark red to highlight facts */
 }
 
-.depression {
+/* Set stlying for depression section */
+.home_depression {
     width: 100%;
-    background-color: lightblue;  
+    background-color: lightblue;
 }
 
-.depression_content {
-    margin: 2% 0%;
+/* Set stlying for PHQ9 Test section */
+.home_depression_test {
+    width: 100%;
+    background-color: pink;
+}
+
+/* Set stlying for content block on the right */
+.content_right {
+    margin-top: 2%;
+    margin-bottom: 0%;
     width: 50%;
+    /* Set width for cootent div */
     margin-left: auto;
+    /* Allign block to right */
     margin-right: 0;
-    padding: 5% 0%;
+    padding: 3% 0%;
 }
 
-.depression_content p {
+/* Set stlying for paragraph in content block on right */
+.content_right p {
     width: 90%;
+    text-align: justify;
+    /* justify content text */
+    padding: 1% 0%;
+}
+
+/* Set stlying for content block on left */
+.content_left {
+    padding: 1% 0%;
+    margin: 2% 0%;
+    width: 75%;
+    margin-left: auto;
+    /* Allign block to center of div */
+    margin-right: auto;
+}
+
+/* Set stlying for paragraph in content block on left */
+.content_left p {
     text-align: justify;
     list-style: none;
     padding: 1% 0%;
 }
 
-.btn {
-    padding: 2% 2%;
-    font-weight: bold;
-    width: 25%;
-    text-align: center;
-    background-color: white;
+/* Set stlying for content block on center */
+.content_center {
+    margin: 3% auto;
 }
 
+/* Set stlying for header in content center */
+.content_center h2 {
+    margin-left: 22%;
+    /* Allign header with paragraph in center bloock */
+}
+
+/* Set stlying for paragraph in content block on center */
+.content_center p {
+    text-align: justify;
+    margin: 0% auto;
+    /* center paragraph in div */
+    width: 55%;
+}
+
+/* Set styling for lists in content center block */
+.content_center li {
+    list-style: none;
+    /* remove styling */
+    text-align: justify;
+    margin: 1% auto;
+    width: 55%;
+}
+
+/* Set styling for button */
+.btn {
+    display: inline-block;
+    /* display as inline block */
+    padding: 2% 2%;
+    /* increase padding in button. */
+    font-weight: bold;
+    /* bold text */
+    width: 12em;
+    /* set button to have same width */
+    text-align: center;
+    background-color: white;
+    border: 1px black solid;
+    /* set button border */
+    border-radius: 8px;
+    /* round borders */
+}
+
+/* Set styling for button's hover effect */
+.btn:hover {
+    background-color: lightgray;
+    /* change backgroundd color when hover */
+}
+
+/* Set styling for text in button */
 .btn span {
     font-size: 1.25em;
     color: black;
 }
 
-.depression_test_content {
-    padding: 1% 0%;
-    margin: 2% 0%;
+/* Set styling for containers  */
+.container {
+    display: table;
+    /* display as table */
+    width: 56%;
+    height: 55vh;
+    margin: 2% auto;
+    /* center div */
+
+    background-color: white;
+    background-repeat: no-repeat;
+    /* set background image to not repeat */
+    background-position: center;
+    /* set background image to be centered */
+    background-size: cover;
+    /* set background image to be a cover */
+}
+
+/* Set styling for content inside container */
+.container_content {
+    display: table-cell;
+    /* display as table cell */
+    vertical-align: middle;
+    /* vertical allign contents to the middle */
+    width: 100%;
+    height: 55vh;
+    margin: auto;
+    border-radius: 16px;
+
+    background-color: lightgray;
+    opacity: 0.9;
+    padding: 2%;
+}
+
+/* set header styling inside container content */
+.container_content h3,
+.container_content h2 {
+    vertical-align: middle;
+    /* allign to middle */
+    text-align: center;
+    /* allign to center */
     width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.depression_test_content p {
-    width: 80%;
-    text-align: justify;
-    list-style: none;
-    padding: 1% 0%;  
+/* set stylign for paragraph inside container content block */
+.container_content p {
+    vertical-align: middle;
+    width: 55%;
+    text-align: center;
+    padding: 2% 0%;
+    margin: 2% auto;
 }
 
+/* set styling for button inside container content */
+.container_content .btn {
+    vertical-align: middle;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* set styling for content center's button hover effect  */
+.container_content .btn:hover {
+    opacity: 1;
+}
+
+/* set styling for login page */
+.login_interface {
+    min-height: 90vh;
+    /* set min height for the outer div */
+    display: flex;
+    /* display as flex */
+    justify-content: center;
+    /* allign to center */
+    align-items: center;
+}
+
+/* set styling for login form  */
+.form {
+    width: 425px;
+    /* set fixed width in pxiels (not responsive)  */
+    height: auto;
+    background: lightblue;
+    box-shadow: 0 0 10px gray;
+    /* add box shadow */
+    padding: 1.9em 2.4em;
+    /* set padding for login box */
+    border-radius: 8px;
+    /* round box edges */
+}
+
+/* set stylign for header insdie login box */
+.form h3 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7.5%;
+}
+
+/* set styling for input boxes inside login box */
+.form .input_box {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* set styling for last element inside input box */
+.form .input_box:last-child {
+    margin-bottom: 0;
+}
+
+/* set styling for labels inside input box */
+.form .input_box label {
+    display: block;
+    margin-bottom: 1%;
+}
+
+/* set styling for the inputs inside inut box */
+.form .input_box input {
+    padding: 4%;
+    width: 100%;
+    border: 1px solid transparent;
+    font-size: 1em;
+    border-radius: 5px;
+    background: #f5f4f4;
+}
+
+/* set styling for focus effect for input boxes  */
+.form .input_box .input:focus {
+    border-color: #727272;
+}
+
+/* set styling for input div inside input boxes  */
+.form .input_box .input_field {
+    position: relative;
+}
+
+/* set stylign for login button */
+.form .input_box .btn {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: #fff;
+}
+
+/* set styling for login button when disabled */
+.form .input_box .btn.disabled {
+    background: #727272;
+}
+
+/* set styling for login button when enabled */
+.form .input_box .btn.enabled {
+    background: #1dbf73;
+    cursor: pointer;
+}
+
+/* set styling for footer */
 .footer {
     padding: 1% 0%;
     background-color: lightgray;
 }
 
-.login_interface {
-	min-height: 90vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/* Set styling for contact and login div */
+.contact,
+.signup_interface {
+    z-index: 2;
+    width: 75%;
+    padding: 5%;
+    background-color: white;
+    margin: 0 auto;
 }
 
-.form {
-	width: 425px;
-	height: auto;
-	background: rgba(230, 230, 230, 0.877);
-    box-shadow: 0 0 10px gray;
-	padding: 1.9em 2.4em;
-	border-radius: 2px;
+/* Full-width input fields */
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=date] {
+    width: 100%;
+    padding: 1%;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    background: #f1f1f1;
+    border: 1px gray solid;
+    border-radius: 6px;
 }
 
-.form h3 {
-    margin-left: auto;
-    margin-right: auto;
-	margin-bottom: 7.5%;
+/* set styling for focus effects for input-fields  */
+input[type=text]:focus,
+input[type=password]:focus input[type=number]:focus,
+input[type=date]:focus {
+    background-color: #ddd;
+    outline: none;
 }
 
-.form .input_box{
-	margin-bottom: 20px;
-	width: 100%;
-	position: relative;
+/* set styling for submit button  */
+input[type=submit] {
+    background-color: lightblue;
+    color: black;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2% 0;
 }
 
-.form .input_box:last-child{
-	margin-bottom: 0;
+/* set styling for inputbox in contact us */
+.contact textarea {
+    margin: 5px 0 0 0;
+    width: 100%;
+    height: 20vh;
 }
 
-.form .input_box label{
-	display: block;
-	margin-bottom: 1%;
+/* seet styling for horizontal line styling */
+.contact hr,
+.signup_interface hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
 }
 
-.form .input_box input{
-	padding: 4%;
-	width: 100%;
-	border: 1px solid transparent;
-	font-size: 1em;
-	border-radius: 5px;
+/* Setstyling for the submit button in register */
+.registerbtn {
+    font-size: 1.25em;
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
 }
 
-.form .input_bpx .input{
-	background: #f5f4f4;
+/* set styling for register button's hover effect */
+.registerbtn:hover {
+    opacity: 1;
 }
 
-.form .input_box .input:focus{
-	border-color: #1dbf73;
+/* set styling for links inside register page */
+.signup_interface a {
+    color: dodgerblue;
+    text-decoration: underline;
 }
 
-.form .input_box .input_field{
-	position: relative;
+/* Set styling for sign in div inside register page */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1% 0;
 }
 
-.form .input_box .btn {
-	text-transform: uppercase;
-	letter-spacing: 0.5em;
-	color: #fff;
-}
+/* set styling for mobile devices under 1025 px */
+@media screen and (max-width: 1025px) {
 
-.form .input_box .btn.disabled{
-	background: #727272;
-}
-
-.form .input_box .btn.enabled{
-	background: #1dbf73;
-	cursor: pointer;
-}
-
-.form .input_box .error_msg{
-	font-size: 1em;
-	margin-bottom: 3%;	
-	color: #f74040;
-    display: none;
-}
-
-@media screen and (max-width: 820px) {
-
+    /* set styling for header in mobile devices */
     h1 {
         font-size: 4.5em;
     }
-    
+
     h2 {
         margin: 1% 0%;
         font-size: 2.75em;
         color: black;
     }
-    
+
+    /* set styling for paragraph and list in mobile */
+    p,
+    li {
+        font-size: 1.25em;
+        width: 100%;
+        letter-spacing: 0px;
+    }
+
+    /* set styling for span in mobile */
     span {
         font-size: 1.25em;
     }
-    
+
+    /* set styling for strong elements on mobile */
     strong {
         font-size: 1.75em;
     }
-    
+
+    /* set styling for footer in mobile */
     footer {
-        font-size: 0.75em;
+        padding: 3% 0;
         text-align: center;
     }
 
+    /* set styling for navigation bar div in mobile  */
     .navbar {
+        width: 100%;
         display: block;
     }
 
+    /* set for navigation abr button in mobile */
+    .navbar a {
+        width: 1em;
+    }
+
+    /* change hover effect to white to match bg since mobile doens't have it */
+    .navbar a:hover {
+        background-color: white;
+    }
+
+    /* set styling for navigation bar logo */
     .navbar a.logo {
         float: left;
         background-color: white;
     }
-    
+
+    /* Hide buttons for hamburger icon  */
     .navbar a:not(:first-child) {
         display: none;
     }
 
+    /* set styling for hamburger icon */
     .navbar a.icon {
-      float: right;
-      display: block;
+        margin-right: 2%;
+        float: right;
+        /* allign to the far right side of nav bar */
+        display: block;
     }
 
+    /* set styling for nav bar login button in mobile  */
     .navbar a.login {
         color: white;
         background-color: rgb(142, 210, 255);
     }
 
+    /* set styling for navbar sugnup button in mobile */
     .navbar a.signup {
         color: white;
         background-color: pink;
     }
 
+    /* set styling for facts div in mobile */
     .facts {
-        padding: 2% 0%;;
+        padding: 2% 0%;
+        ;
         margin: 2% 0%;
         width: 85%;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
+    /* set styling for lists inside facts fiv in mobile */
     .facts li {
+        width: 95%;
+        margin: 2% 0%;
         text-align: justify;
-        font-size: 1.2em;
         list-style: none;
         padding: 1% 0%;
     }
 
-    .depression {
-        width: 100%;
-        background-color: lightblue;  
-    }
-    
-    .depression_content {
+    /* set styling for right sidde content blocks in mobile */
+    .content_right {
         margin: 4% 0%;
         padding: 4% 0%;
         width: 85%;
         margin-left: auto;
         margin-right: auto;
-
+        /* set the div to center instead of being on right */
     }
 
-    .btn {
-        padding: 2% 2%;
-        font-weight: bold;
-        width: 55%;
-        text-align: center;
-        background-color: white;
-    }
-
-    .btn span {
-        font-size: 1.1em;
-    }
-
-    .depression_test_content {
-        padding: 2% 0%;;
+    /* set styling for left sided cotnent block in mobile  */
+    .content_left {
+        padding: 2% 0%;
         margin: 2% 0%;
         width: 85%;
         margin-left: auto;
         margin-right: auto;
-    }
-    
-    .depression_content p, .depression_test_content p {
-        margin: 1% 0%;
-        text-align: justify;
-        padding: 1% 0%;  
+        /* set div to center instead of being on left */
     }
 
+    /* set stlying for paragraphs inside left & right side content blocks in mobile */
+    .content_right p,
+    .content_left p {
+        width: 95%;
+        margin: 1% 0%;
+        text-align: justify;
+        padding: 1% 0%;
+    }
+
+    /* set styling for home depression section in mobile */
+    .home_depression_test .content_right {
+        margin-top: 4%;
+        margin-bottom: 0;
+    }
+
+    /* set styling for buttons in mobile */
+    .btn {
+        display: inline-block;
+        margin-bottom: 5%;
+        margin-left: auto;
+        /* center button in mobile */
+        margin-right: auto;
+        padding: 2% 2%;
+        font-weight: bold;
+        width: 10em;
+        text-align: center;
+        background-color: white;
+    }
+
+    /* set styling for button text in mobile  */
+    .btn span {
+        font-size: 1.1em;
+    }
+
+    /* set styling for content center block in mobile */
+    .content_center {
+        margin: 8% auto;
+    }
+
+    /* set styling for header in content center block in mobile */
+    .content_center h2 {
+        margin: 0 auto;
+        /* center header in mobile */
+        width: 85%
+    }
+
+    /* set styling for paragraph in content center block in mobile */
+    .content_center p {
+        text-align: justify;
+        margin: 0 auto;
+        /* center paragraph in mobile */
+        width: 85%;
+    }
+
+    /* set stlying for lists in content center in */
+    .content_center li {
+        list-style: none;
+        /* remove list dot */
+        text-align: justify;
+        margin: 1% auto;
+        width: 85%;
+        padding-top: 2%;
+    }
+
+    /* set styling for containers in mobile */
+    .container {
+        width: 85%;
+        height: 65vh;
+        margin: 5% auto;
+        /* center them */
+    }
+
+    /* set styling for container content in mobile */
+    .container_content {
+        width: 100%;
+        height: 65vh;
+    }
+
+    /* set styling for headers in container content */
+    .container_content h3,
+    .container_content h2 {
+        text-align: left;
+        /* left allign them in mobile */
+        padding: 5%;
+        width: 85%;
+    }
+
+    /* set paragraph styling in container content in mboile */
+    .container_content p {
+        width: 75%;
+        text-align: left;
+        /* left allign in mobile */
+        padding: 0;
+    }
+
+    /* set styling for button in container content in mobile */
+    .container_content .btn {
+        padding: 3%;
+        opacity: 1;
+    }
+
+    .contact {
+        height: 100vh;
+    }
+
+    .contact h2 {
+        margin-top: 2em;
+    }
+
+    /* set styling for login box in mobile */
     .login_interface {
         min-width: 100%;
         min-height: 100%;
+        /* set width and height to be on the whole screen */
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
+    /* set styling for login form in mobile */
     .form {
+        margin: 0;
         width: 100%;
-        height: 96%;
-        background: rgba(230, 230, 230, 0.877);
+        height: 100vh;
         box-shadow: none;
         border: none;
-        padding: 50% 2.4em;
+        border-radius: 0;
+        padding: 15em 2.4em;
+    }
+
+    /* set styling for register interface in mobile  */
+    .signup_interface {
+        padding-top: 8em;
+        width: 85%;
     }
 }
-  
-@media screen and (max-width: 820px) {
 
+/* Styling for hamburger icon list that will be modified with JS */
+@media screen and (max-width: 1025px) {
+
+    /* set styling for navbar after tapping on the hamburger icon */
     .navbar.responsive {
         position: relative;
-    } 
+        /* set navbar to responsive */
+    }
 
+    /* set styling for hamburger icon after tapping hamburger icon */
     .navbar.responsive .icon {
         position: absolute;
         right: 0;
+        /* allign to the left */
         top: 0;
     }
-    
+
+    /* set styling for expanded menu after tapping hamburger icon  */
     .navbar.responsive a {
+        width: 97%;
+        /* set width of button  */
         float: none;
         display: block;
+        /* show them and allign text to left */
         text-align: left;
     }
 }
