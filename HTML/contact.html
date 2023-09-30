@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Depressly | Contact Us </title>
+    <meta charset="utf-8">
+    <!-- set default viewport size for better scalability on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css style sheet -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- link to custom library for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link icon to use custom icon -->
+    <link rel="icon" type="image/x-icon" href="../IMG/icon.ico">
+</head>
+
+<body>
+    <nav class="navbar" id="topNavbar">
+        <a class="logo" href="../index.html"><img src="../IMG/logo.png" width="50em"></a>
+        <a href="depression.html">Depression</a>
+        <a href="help.html">Get Help</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="donate" href="#">Donate Us</a>
+        <a class="login" href="login.html"> Login </a>
+        <a class="signup" href="signup.html">Sign Up</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- Form is placed isnide header instead of main as navbar's styling will be messed up if form in main -->
+    <header>
+        <!-- Contact Form in post method to hide information -->
+        <!-- When submit calls form_submit function at redirect back to the same page -->
+        <form method="post" action="contact.html" onsubmit="return form_submit();">
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <hr>
+
+                <!-- First name input box, required to fill -->
+                <label for="text"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" name="first_name" id="first_name" required>
+
+                <!-- Last name input box, required to fill -->
+                <label for="text"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="last_name" id="last_name" required>
+
+                <!-- Email input box, required to fill -->
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                <!-- Text box, required to fill -->
+                <label for="subject"><b>Message</b></label><br>
+                <textarea id="subject" name="subject" placeholder="Enter Message Here" required></textarea>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+                <hr>
+            </div>
+        </form>
+    </header>
+
+    <footer class="footer">
+        <div id="footer_content">
+            <i>
+                Copyright &copy; 2022 Sunway University | Made By: Chong Yu Cheng 15079395 (2212-WEB1201 G2)
+            </i>
+        </div>
+    </footer>
+
+    <script src="../JS/scripts.js"></script>
+</body>
+
+</html>
