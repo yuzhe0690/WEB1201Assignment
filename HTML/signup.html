@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Depressly | Register </title>
+    <meta charset="utf-8">
+    <!-- set default viewport size for better scalability on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css style sheet -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- link to custom library for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link icon to use custom icon -->
+    <link rel="icon" type="image/x-icon" href="../IMG/icon.ico">
+</head>
+
+<body>
+    <nav class="navbar" id="topNavbar">
+        <a class="logo" href="../index.html"><img src="../IMG/logo.png" width="50em"></a>
+        <a href="depression.html">Depression</a>
+        <a href="help.html">Get Help</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="donate" href="#">Donate Us</a>
+        <a class="login" href="login.html"> Login </a>
+        <a class="signup" href="signup.html">Sign Up</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+
+    <header>
+        <br>
+        <!-- Register form, uses post method to hide information -->
+        <!-- Redirects to index page and call register_validation function when submit -->
+        <form method="post" action="../index.html" onsubmit="return register_validation();">
+            <div class="signup_interface">
+                <h2>Register</h2>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <!-- Input box for username, required to fill -->
+                <label for="uid"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+                <!-- Input box for password, required to fill -->
+                <label for="pw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pw" id="pw" required>
+
+                <!-- Input box for confirmed password, required to fill  -->
+                <label for="pw-repeat"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="pw-repeat" id="pw-repeat" required>
+
+                <!-- Input box for first name, required to fill -->
+                <label for="fname"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" name="first_name" id="first_name" required>
+
+                <!-- Input box for last name, required to fill -->
+                <label for="lname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="last_name" id="last_name" required>
+
+                <!-- Input box for phone number, required to fill -->
+                <label for="number"><b>Phone Number (+60)</b></label>
+                <input type="number" placeholder="Enter Phone Number" name="phone" id="phone" required>
+
+                <!-- Input box for email, required to fill -->
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                <!-- Input box for date of birth, required to fill -->
+                <label for="date"><b>Date of Birth</b></label>
+                <input type="date" placeholder="Enter Date" name="date" id="date" required>
+
+                <hr>
+                <!-- Link to terms and privacy, dummy link -->
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                <!-- Register button -->
+                <button type="submit" class="registerbtn">Register</button>
+            </div>
+
+            <!-- Link to login page -->
+            <div class="signin">
+                <!-- Override text-decoration to have underline for this link only -->
+                <p>Already have an account? <a href="login.html" style="text-decoration: underline;">Sign in</a></p>
+            </div>
+        </form>
+    </header>
+
+    <footer class="footer">
+        <div id="footer_content">
+            <i>
+                Copyright &copy; 2022 Sunway University | Made By: Chong Yu Cheng 15079395 (2212-WEB1201 G2)
+            </i>
+        </div>
+    </footer>
+
+    <script src="../JS/scripts.js"></script>
+</body>
+
+</html>
