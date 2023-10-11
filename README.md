@@ -4,7 +4,7 @@ This is the final project of the web fundamental course, I am tasked to create a
 I had chosen to do an educational website about depression since it has been a common mental health issue in recent years and it is severe.
 There is an interval between the update of the code as I had moved my code to repl.it since it is easier to host my website there and I did not make any changes to the GitHub version
 
-The link to the website is here: [https://web1201assignment.yu-chengcheng9.repl.co/index.html](url)
+The link to the website is here: https://web1201assignment.yu-chengcheng9.repl.co/index.html
 
 
 **# About the Website #**
